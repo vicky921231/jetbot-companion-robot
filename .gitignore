@@ -1,0 +1,20 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# --- 訓練產物 ---
+# 模型檔單檔 43 MB，且會隨資料集重訓而頻繁更換。每個版本都留在歷史裡會讓
+# repo 永久變肥，而且 git 沒辦法真正刪掉（只能重寫歷史）。改用 OneDrive 傳。
+*.pth
+*.engine
+
+# --- 影像資料 ---
+# 避障資料集與標記校正照含可辨識的人像，不進版控。
+collision_avoidance/dataset/
+object_following/marker_calibration/samples/
+object_following/marker_calibration/check_out/
+
+# --- 交付與錄製產物 ---
+*.zip
+record_*.jsonl
